@@ -1,0 +1,13 @@
+@use 'variaveis' as *;
+@use 'componentes';
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:Arial,Helvetica,sans-serif; color:$texto; background:#fff; }
+a { color:inherit; text-decoration:none; }
+button,input { font:inherit; }
+button { cursor:pointer; }
+img { display:block; max-width:100%; }
+.conteiner { width:min(1120px,92%); margin-inline:auto; }
+.somente-leitor-tela { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.titulo-secao { display:flex; align-items:center; gap:20px; color:$azul; text-align:center; justify-content:center; font-size:21px; margin:0 0 20px; &::before,&::after { content:''; height:1px; flex:1; background:#e8e8e8; } }
+.botao-amarelo { display:inline-block; padding:12px 28px; border:0; border-radius:3px; background:$amarelo; color:#111; font-size:12px; font-weight:700; }

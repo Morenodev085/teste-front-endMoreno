@@ -1,0 +1,34 @@
+@use 'variaveis' as *;
+.beneficios { border-bottom:1px solid $borda; font-size:11px; color:$cinza; .beneficios-conteudo { display:flex; justify-content:space-around; gap:12px; padding:10px 0; } strong { color:$azul; } }
+.conteudo-cabecalho { display:flex; align-items:center; gap:25px; padding:20px 0; nav { display:flex; gap:15px; font-size:23px; } }
+.logotipo { font-size:27px; font-weight:800; letter-spacing:-1px; white-space:nowrap; span { background:$amarelo; color:#fff; border-radius:50%; padding:3px 7px; } }
+.formulario-busca { flex:1; display:flex; border:1px solid #ddd; border-radius:5px; overflow:hidden; input { flex:1; min-width:0; border:0; padding:13px; } button { border:0; background:#fff; padding:0 18px; font-size:22px; } }
+.navegacao-principal { border-block:1px solid $borda; .links-menu { display:flex; justify-content:space-between; gap:20px; padding:15px 0; overflow-x:auto; white-space:nowrap; font-size:11px; font-weight:700; } }
+.destaque { display:flex; align-items:center; min-height:315px; color:#fff; background:linear-gradient(90deg,#000b,#0003),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=85') center/cover; h1 { max-width:460px; font-size:clamp(29px,4vw,42px); line-height:1.12; margin:0 0 14px; } p { font-size:22px; margin:0 0 25px; } strong { color:$amarelo; } }
+.categorias { padding:35px 0 65px; }
+.lista-categorias { display:grid; grid-template-columns:repeat(7,1fr); gap:15px; list-style:none; padding:0; margin:0; a { display:block; text-align:center; font-size:11px; } }
+.icone-categoria { display:grid; place-items:center; height:95px; background:#f7f7f7; border-radius:10px; font-size:34px; margin-bottom:11px; }
+.lista-categorias li:first-child .icone-categoria { background:white; color:$azul; box-shadow:0 2px 12px #0002; }
+.vitrine { padding-bottom:30px; }
+.abas { display:flex; border:1px solid #ddd; margin-bottom:17px; overflow-x:auto; span { flex:1; min-width:105px; padding:12px 8px; text-align:center; border-right:1px solid #ddd; font-size:11px; color:#666; } .aba-ativa { color:$azul; font-weight:bold; } }
+.grade-produtos { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px; }
+.cartao-produto { display:flex; flex-direction:column; padding:14px; border:1px solid #e8e8e8; border-radius:8px; box-shadow:0 3px 10px #0002; img { width:100%; height:190px; object-fit:contain; } h3 { min-height:35px; font-size:12px; font-weight:400; color:#666; line-height:1.4; } data { font-size:19px; font-weight:700; margin-top:auto; } .descricao-produto { font-size:11px; color:#888; line-height:1.4; } }
+.frete-gratis { color:$azul; font-size:11px; font-weight:bold; }
+.botao-comprar { width:100%; padding:12px; background:$azul; color:#fff; border:0; border-radius:3px; font-size:11px; font-weight:700; }
+.aviso-estudo { border:1px dashed #a58c30; background:#fff9df; border-radius:8px; padding:20px; margin-bottom:20px; font-size:14px; }
+.parceiros { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; padding:35px 0 65px; }
+.cartao-parceiro { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; min-height:250px; padding:30px; color:white; background-size:cover; background-position:center; border-radius:12px; h2 { font-size:27px; margin:0 0 8px; } p { font-size:12px; } }
+.marcas { padding-bottom:65px; }
+.lista-marcas { display:grid; grid-template-columns:repeat(5,1fr); gap:18px; a { display:flex; justify-content:center; align-items:center; aspect-ratio:1; border-radius:50%; box-shadow:0 3px 12px #0002; font-size:16px; font-weight:700; } strong { background:$amarelo; color:white; border-radius:50%; padding:3px 6px; } }
+.boletim { padding:25px 0; background:$roxo; color:#fff; .conteudo-boletim { display:flex; justify-content:space-between; align-items:center; gap:30px; } h2 { font-size:19px; margin:0 0 6px; } p { font-size:11px; color:#ddd; } }
+.formulario-boletim { display:grid; grid-template-columns:1fr 1fr auto; gap:8px; min-width:50%; > input { min-width:0; padding:12px; border:0; border-radius:3px; font-size:12px; } button { border:0; background:$amarelo; padding:12px 19px; border-radius:3px; font-size:11px; font-weight:700; } .consentimento { grid-column:1/-1; font-size:11px; } }
+.rodape-site { background:#f7f7f7; padding:40px 0 20px; .colunas-rodape { display:grid; grid-template-columns:2fr repeat(3,1fr); gap:25px; } h2 { font-size:14px; } nav a { display:block; color:#666; font-size:12px; margin:10px 0; } p { color:#666; font-size:12px; } }
+.direitos-autorais { text-align:center; border-top:1px solid #ddd; padding-top:20px; margin-top:30px; }
+.modal-produto { width:min(650px,92vw); max-height:90vh; border:0; border-radius:5px; padding:0; box-shadow:0 15px 55px #0003; &::backdrop { background:#000a; } }
+.corpo-modal { position:relative; display:grid; grid-template-columns:45% 55%; gap:15px; padding:35px; > img { width:100%; height:240px; object-fit:contain; } }
+.conteudo-modal { padding:8px 22px 8px 0; min-width:0; h2 { font-size:15px; font-weight:500; text-transform:uppercase; } data { font-size:20px; font-weight:700; } p { font-size:12px; color:#888; line-height:1.5; } }
+.fechar-modal { position:absolute; top:10px; right:12px; border:0; background:transparent; color:#888; font-size:25px; }
+.acoes-modal { display:flex; gap:10px; align-items:center; margin-top:20px; .botao-amarelo { flex:1; } }
+.controle-quantidade { display:flex; align-items:center; border:1px solid #ddd; button { border:0; background:#fff; padding:10px 12px; } output { min-width:24px; text-align:center; } }
+@media(max-width:750px) { .conteudo-cabecalho { flex-wrap:wrap; } .formulario-busca { order:3; flex-basis:100%; } .lista-categorias { grid-template-columns:repeat(4,1fr); } .grade-produtos,.parceiros { grid-template-columns:repeat(2,1fr); } .lista-marcas { grid-template-columns:repeat(3,1fr); } .conteudo-boletim { flex-direction:column; align-items:stretch !important; } .formulario-boletim { min-width:0; } .rodape-site .colunas-rodape { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:460px) { .beneficios-conteudo span:last-child { display:none; } .lista-categorias { grid-template-columns:repeat(3,1fr); } .grade-produtos,.parceiros { grid-template-columns:repeat(2,1fr); } .cartao-produto img { height:135px; } .cartao-produto { padding:10px; } .lista-marcas a { font-size:11px; } .formulario-boletim { grid-template-columns:1fr; } .corpo-modal { grid-template-columns:1fr; padding:20px; > img { height:155px; } } .conteudo-modal { padding:0; } }
